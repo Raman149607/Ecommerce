@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "84e7c131-e624-4b89-8697-0f3681f3296a",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buyers",
+			"item": []
+		},
+		{
+			"name": "Sellers",
+			"item": [
+				{
+					"name": "AddProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Iphone\",\r\n    \"productMake\": \"Apple\",\r\n    \"productStock\": 50,\r\n    \"quantity\": 3,\r\n    \"price\": 659.32\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/api/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"addproduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AddProducts",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"Iphone\",\r\n    \"productMake\": \"Apple\",\r\n    \"productStock\": 50,\r\n    \"quantity\": 3,\r\n    \"price\": 659.32\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8989/api/addproduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8989",
+									"path": [
+										"api",
+										"addproduct"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Jun 2022 10:03:33 GMT"
+								},
+								{
+									"key": "content-length",
+									"value": "27"
+								}
+							],
+							"cookie": [],
+							"body": "Products Added Successfully"
+						}
+					]
+				},
+				{
+					"name": "GetAllproducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8989/api/allsellers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"allsellers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllproducts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8989/api/allsellers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8989",
+									"path": [
+										"api",
+										"allsellers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Jun 2022 09:37:40 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"sellerId\": \"2c99803a81384ba5018138602055000d\",\n        \"listOfProduts\": [\n            {\n                \"productModel\": \"2c99803a81384ba5018138602055000e\",\n                \"productName\": \"Iphone\",\n                \"productMake\": \"Apple\",\n                \"productStock\": 50,\n                \"quantity\": 3,\n                \"price\": 659.32\n            }\n        ]\n    },\n    {\n        \"sellerId\": \"2c99803a81384ba50181386045df000f\",\n        \"listOfProduts\": [\n            {\n                \"productModel\": \"2c99803a81384ba50181386045df0010\",\n                \"productName\": \"Iphone\",\n                \"productMake\": \"Apple\",\n                \"productStock\": 50,\n                \"quantity\": 3,\n                \"price\": 659.32\n            }\n        ]\n    },\n    {\n        \"sellerId\": \"2c99803a81384ba5018138607eae0011\",\n        \"listOfProduts\": [\n            {\n                \"productModel\": \"2c99803a81384ba5018138607eae0012\",\n                \"productName\": \"Iphone\",\n                \"productMake\": \"Apple\",\n                \"productStock\": 50,\n                \"quantity\": 3,\n                \"price\": 659.32\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetByProductsId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8989/api/productmodel/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"productmodel",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetByProductsId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8989/api/productmodel/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8989",
+									"path": [
+										"api",
+										"productmodel",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Jun 2022 10:26:32 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productModel\": 1,\n    \"productName\": \"Iphone\",\n    \"productMake\": \"Apple\",\n    \"productStock\": 50,\n    \"quantity\": 3,\n    \"price\": 659.32\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateProductsDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productStock\": 55,\r\n    \"price\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8989/api//products/1?productstock=55&price=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"",
+								"products",
+								"1"
+							],
+							"query": [
+								{
+									"key": "productstock",
+									"value": "55"
+								},
+								{
+									"key": "price",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateProductsDetails",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productStock\": 55,\r\n    \"price\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8989/api//products/1?productstock=55&price=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8989",
+									"path": [
+										"api",
+										"",
+										"products",
+										"1"
+									],
+									"query": [
+										{
+											"key": "productstock",
+											"value": "55"
+										},
+										{
+											"key": "price",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Jun 2022 02:01:27 GMT"
+								},
+								{
+									"key": "content-length",
+									"value": "29"
+								}
+							],
+							"cookie": [],
+							"body": "Products Updated Successfully"
+						}
+					]
+				},
+				{
+					"name": "GetProductByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8989/api/productname/Iphone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"productname",
+								"Iphone"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetProductByName",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8989/api/productname/Iphone",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8989",
+									"path": [
+										"api",
+										"productname",
+										"Iphone"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Jun 2022 10:30:15 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productModel\": 1,\n    \"productName\": \"Iphone\",\n    \"productMake\": \"Apple\",\n    \"productStock\": 50,\n    \"quantity\": 3,\n    \"price\": 659.32\n}"
+						}
+					]
+				},
+				{
+					"name": "GetProductByPrice",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
